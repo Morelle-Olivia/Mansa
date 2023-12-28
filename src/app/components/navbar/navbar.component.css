@@ -1,0 +1,7 @@
+*{
+  font-family: Roboto;
+}
+a.nav-link {
+  background-color: white;
+  border-radius: 8px;
+}
