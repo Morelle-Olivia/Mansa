@@ -1,0 +1,11 @@
+.trans_tables {
+  padding: 8% 4%;
+  border-radius: 10px;
+  background-color: #E5E9FF;
+  position: relative;
+}
+
+hr {
+  margin: -0.5rem 0;
+  padding-bottom: 1rem;
+}
