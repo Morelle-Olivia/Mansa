@@ -1,0 +1,25 @@
+*{
+  font-family: Roboto;
+}
+
+.landing-page {
+  padding: 2% 5%;
+}
+
+.page_header {
+  padding: 4% 0%;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 72px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.sender {
+  padding: 3% 2%;
+  background-color: white;
+  /*width: 570px;*/
+  height: auto;
+  top: 244px;
+  border-radius: 10px;
+}
