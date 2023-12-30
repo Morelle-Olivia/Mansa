@@ -1,0 +1,22 @@
+.trans_tables {
+  padding: 8% 4%;
+  border-radius: 10px;
+  background-color: #E5E9FF;
+  position: relative;
+}
+.status_box {
+  position: relative;
+  margin-bottom: -1rem;
+}
+.status {
+  position: absolute;
+  padding: 3px 15px;
+  margin-left: -20%;
+  border-radius: 13px;
+  color: #FF0000;
+  font-weight: 400;
+  background-color: #FFB4B4;
+}
+hr {
+  margin: -0.5rem 0;
+}
