@@ -14,10 +14,11 @@ import { ViewAllTransactionsComponent } from './pages/view-all-transactions/view
     NavbarComponent,
     LandingPageComponent,
     TransactionsComponent,
-    ViewAllTransactionsComponent
+    ViewAllTransactionsComponent,
   ],
   imports: [
     BrowserModule,
+    // FontAwesomeModule,
     AppRoutingModule
   ],
   providers: [],

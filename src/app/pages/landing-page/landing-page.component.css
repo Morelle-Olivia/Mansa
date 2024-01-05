@@ -24,6 +24,23 @@
   border-radius: 10px;
 }
 
+.butt_div {
+  padding: 2% 0% 0% 51%;
+}
+
+.send_button {
+  background-color: #5268FF;
+  padding: 2% 46%;
+  border-radius: 10px;
+}
+
 .dashboard {
-  padding-left: 5%;
+  padding-left: 2%;
+}
+
+.slider {
+  padding: 60% 0% 0% 0%;
+}
+.menu-button {
+  padding: 60% 0% 0% 90%;
 }

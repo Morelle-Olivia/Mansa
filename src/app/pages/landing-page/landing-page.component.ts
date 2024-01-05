@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing-page.component.css']
 })
 export class LandingPageComponent implements OnInit {
+  menuIsClicked = false;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onClickMenu() {
+    this.menuIsClicked = !this.menuIsClicked;
   }
 
 }
