@@ -1,6 +1,6 @@
 <div class="landing-page">
   <div class="d-flex justify-content-between">
-    <div class="col-8">
+    <div class="col-7">
       <h3 class="text-white page_header">Fast, Secured Cross-border Transactions</h3>
       <div class="d-flex gap-3">
         <div class="sender">
@@ -26,16 +26,21 @@
         <button class="btn btn text-white send_button">Send</button>
       </div>
     </div>
+    <div class="col-1">
+      <div *ngIf="menuIsClicked" class="slider">
+        <button class="bi-chevron-compact-right btn btn-dark" (click)="onClickMenu()"></button>
+      </div>
+    </div>
     <div class="col-4 dashboard">
+      <router-outlet *ngIf="menuIsClicked"></router-outlet>
+
       <div class="d-flex">
-        <div *ngIf="menuIsClicked" class="slider">
-          <button class="bi-chevron-compact-right btn btn-dark" (click)="onClickMenu()"></button>
-        </div>
-        <router-outlet *ngIf="menuIsClicked"></router-outlet>
+
         <div *ngIf="!menuIsClicked" class="menu-button">
           <button class="bi-menu-up btn btn-dark" (click)="onClickMenu()"></button>
         </div>
       </div>
+
 <!--      <app-view-all-transactions></app-view-all-transactions>-->
 <!--      <app-transactions></app-transactions>-->
     </div>

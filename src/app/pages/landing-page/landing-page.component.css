@@ -1,5 +1,6 @@
 *{
   font-family: Inter;
+  font-size: 13px;
 }
 
 .landing-page {
@@ -8,7 +9,7 @@
 
 .page_header {
   padding: 4% 0%;
-  font-size: 38px;
+  font-size: 34px;
   font-weight: 400;
   line-height: 72px;
   letter-spacing: 0em;
@@ -35,12 +36,15 @@
 }
 
 .dashboard {
+  display: grid;
+  padding-top: -10%;
   padding-left: 2%;
 }
 
 .slider {
-  padding: 60% 0% 0% 0%;
+  padding-top: 14rem;
+  padding-left: 4rem;
 }
 .menu-button {
-  padding: 60% 0% 0% 90%;
+  padding: 50% 0% 0% 90%;
 }

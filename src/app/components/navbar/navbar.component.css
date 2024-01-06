@@ -1,7 +1,10 @@
 *{
   font-family: Inter;
+  font-size: 14px;
 }
 a.nav-link {
   background-color: white;
+  color: #000000;
   border-radius: 8px;
+  font-weight: 500;
 }
