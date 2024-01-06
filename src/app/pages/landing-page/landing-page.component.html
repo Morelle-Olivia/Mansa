@@ -1,5 +1,5 @@
 <div class="landing-page">
-  <div class="d-flex">
+  <div class="d-flex justify-content-between">
     <div class="col-8">
       <h3 class="text-white page_header">Fast, Secured Cross-border Transactions</h3>
       <div class="d-flex gap-3">
@@ -31,7 +31,7 @@
         <div *ngIf="menuIsClicked" class="slider">
           <button class="bi-chevron-compact-right btn btn-dark" (click)="onClickMenu()"></button>
         </div>
-        <router-outlet></router-outlet>
+        <router-outlet *ngIf="menuIsClicked"></router-outlet>
         <div *ngIf="!menuIsClicked" class="menu-button">
           <button class="bi-menu-up btn btn-dark" (click)="onClickMenu()"></button>
         </div>

@@ -6,6 +6,7 @@
   border-radius: 10px;
   background-color: #E5E9FF;
   position: relative;
+  width: 100%;
 }
 .status_box {
   position: relative;
