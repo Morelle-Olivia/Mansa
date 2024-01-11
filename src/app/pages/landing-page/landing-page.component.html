@@ -7,8 +7,29 @@
           <p>Sender</p>
           <form action="">
             <div class="d-flex justify-content-between">
-              <input type="text" class="form-control" placeholder="Your email (Optional)">
-              <input type="text" class="form-control ms-2" placeholder="Your email (Optional)">
+              <div>
+                <input type="text" class="form-control" placeholder="Your email (Optional)">
+                <input type="text" class="form-control mt-2" placeholder="Country and Currency">
+                <select class="form-select mt-2" aria-label="Default select example" >
+                  <option selected>Payment Method</option>
+                  <option value="1">MTN Mobile Money </option>
+                  <option value="2">Bank Card</option>
+                </select>
+              </div>
+              <div>
+                <div>
+<!--                  <input type="text" class="form-control ms-2" placeholder="Number (Mobile Money)">-->
+                </div>
+                <div>
+                  <input type="text" class="form-control ms-2" placeholder="Name on Card">
+                  <input type="text" class="form-control mt-2 ms-2" placeholder="Card Number">
+                  <div class="d-flex" style="width: 100%">
+                    <input type="text" class="form-control mt-2 ms-2" placeholder="MM / YY" style="width: 100%">
+                    <input type="text" class="form-control mt-2 ms-2" placeholder="CVC" style="width: 100%">
+                  </div>
+                </div>
+                <input type="text" class="form-control sending_amount mt-2 ms-2" placeholder="Sending amount">
+              </div>
             </div>
           </form>
         </div>
@@ -24,6 +45,8 @@
       </div>
       <div class="butt_div">
         <button class="btn btn text-white send_button">Send</button>
+        <p class="mt-3 terms_conditions"
+           style="font-size: 10px">Buy using our services you agree to our Terms and Conditions and Privacy Policy.</p>
       </div>
     </div>
     <div class="col-1">
@@ -40,9 +63,6 @@
           <button class="bi-menu-up btn btn-dark" (click)="onClickMenu()"></button>
         </div>
       </div>
-
-<!--      <app-view-all-transactions></app-view-all-transactions>-->
-<!--      <app-transactions></app-transactions>-->
     </div>
   </div>
 </div>
