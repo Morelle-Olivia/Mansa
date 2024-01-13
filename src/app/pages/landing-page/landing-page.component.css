@@ -21,11 +21,12 @@
   background-color: white;
   /*width: 570px;*/
   height: auto;
+  font-family: Roboto;
   top: 244px;
   border-radius: 10px;
 }
 input, select {
-  /*border: transparent;*/
+  height: 100%;
   width: auto;
   font-family: Roboto;
 }
@@ -46,8 +47,73 @@ input:placeholder-shown::placeholder {
   opacity: 2;
 }
 
+.floating-input-container {
+  position: relative;
+  display: grid;
+  gap: 20%;
+}
+
+.floating-input {
+  width: 100%;
+  padding: 10px 0px 9px 12px;
+  font-size: 12px;
+}
+.floating-input-amount {
+  font-family: Roboto;
+  width: 100%;
+  padding: 40px 8px 0px 12px;
+  text-align: right;
+  font-size: 18px;
+}
+
+.floating-label {
+  position: absolute;
+  font-size: 11px;
+  padding: 10px 0px 10px 10px;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transition: 0.2s ease-out;
+}
+
+.floating-input:focus + .floating-label,
+.floating-input:not(:placeholder-shown) + .floating-label {
+  transform: translateY(-10px) scale(0.75);
+  padding: 10px 0px 0px 0px;
+  color: #333;
+}
+
 select {
   width: 100%;
+}
+
+.discount {
+  width: 368px;
+  height: 60px;
+  /*top: 508px;*/
+  /*left: 22px;*/
+  padding: 18px 20px 18px 20px;
+  border-radius: 20px;
+  gap: 10px;
+  background-color: #E5E9FF;
+  /*display: grid;*/
+  /*grid-column: 2;*/
+}
+.discount_text {
+  font-size: 10px;
+}
+.discount_apply {
+  font-size: 8px;
+}
+
+.apply {
+  background-color: #FFFFFF;
+  width: 160px;
+  height: 30px;
+  padding: 8px 10px 8px 10px;
+  border-radius: 10px;
+  border: 1px;
+  gap: 5px;
 }
 
 .sending_amount {
@@ -59,6 +125,9 @@ select {
 .butt_div {
   padding: 2% 0% 0% 51%;
 }
+/*.but_div {*/
+/*  padding: 2% 0% 0% 51%;*/
+/*}*/
 
 terms_conditions {
   color: #6A6D70;
@@ -76,6 +145,12 @@ terms_conditions {
   border-radius: 10px;
 }
 
+/*.send_butt {*/
+/*  background-color: #5268FF;*/
+/*  padding: 2% 46%;*/
+/*  border-radius: 10px;*/
+/*}*/
+
 .dashboard {
   display: grid;
   padding-top: -10%;
@@ -85,7 +160,40 @@ terms_conditions {
 .slider {
   padding-top: 14rem;
   padding-left: 4rem;
+  transition: 0.2s ease-out;
 }
 .menu-button {
   padding: 50% 0% 0% 90%;
+  transition: 0.2s ease-out;
+}
+
+.grid {
+  display: grid;
+  gap: 10px;
+}
+
+.grid-col-1-2 {
+  grid-column: 1/2;
+}
+.grid-col-2 {
+  grid-column: 2;
+}
+.grid-row-1 {
+  grid-row: 1;
+}
+.grid-row-2{
+  grid-row: 2;
+}
+
+.grid-row-3 {
+  grid-row: 3;
+}
+
+.amount {
+  grid-column: 2;
+  grid-row: 2/4;
+}
+
+.amount--card {
+  grid-column: 1/3;
 }

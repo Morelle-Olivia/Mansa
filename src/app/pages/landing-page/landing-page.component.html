@@ -2,47 +2,123 @@
   <div class="d-flex justify-content-between">
     <div class="col-7">
       <h3 class="text-white page_header">Fast, Secured Cross-border Transactions</h3>
-      <div class="d-flex gap-3">
+      <form class="d-flex gap-3">
         <div class="sender">
           <p>Sender</p>
-          <form action="">
-            <div class="d-flex justify-content-between">
-              <div>
-                <input type="text" class="form-control" placeholder="Your email (Optional)">
-                <input type="text" class="form-control mt-2" placeholder="Country and Currency">
-                <select class="form-select mt-2" aria-label="Default select example" >
-                  <option selected>Payment Method</option>
-                  <option value="1">MTN Mobile Money </option>
-                  <option value="2">Bank Card</option>
-                </select>
-              </div>
-              <div>
-                <div>
-<!--                  <input type="text" class="form-control ms-2" placeholder="Number (Mobile Money)">-->
-                </div>
-                <div>
-                  <input type="text" class="form-control ms-2" placeholder="Name on Card">
-                  <input type="text" class="form-control mt-2 ms-2" placeholder="Card Number">
-                  <div class="d-flex" style="width: 100%">
-                    <input type="text" class="form-control mt-2 ms-2" placeholder="MM / YY" style="width: 100%">
-                    <input type="text" class="form-control mt-2 ms-2" placeholder="CVC" style="width: 100%">
-                  </div>
-                </div>
-                <input type="text" class="form-control sending_amount mt-2 ms-2" placeholder="Sending amount">
-              </div>
+          <div class="grid">
+            <div class="floating-input-container grid-col-1-2">
+              <input type="text" class="form-control floating-input" id="myInputs" placeholder="">
+              <label for="myInputs" class="floating-label">Your email (Optional)</label>
             </div>
-          </form>
-        </div>
-          <div class=" sender">
-            <p>Sender</p>
-            <form action="">
-              <div class="d-flex justify-content-between">
-                <input type="text" class="form-control" placeholder="Your email (Optional)">
-                <input type="text" class="form-control ms-2" placeholder="Your email (Optional)">
+            <div class="grid-col-1-2">
+<!--              <input type="text" class="form-control" placeholder="Country and Currency">-->
+              <select (change)="selectCountryAndCurrency($event)" class="form-select"
+                      aria-label="Default select example">
+                <option selected>Country and Currency</option>
+                <option value="1">{{ currencyInput }}</option>
+              </select>
+            </div>
+            <div class="grid-col-1-2">
+              <select (change)="selectPaymentMethod($event)" class="form-select"
+                      aria-label="Default select example">
+                <option selected>Payment Method</option>
+                <option value="1">MTN Mobile Money</option>
+                <option value="2">Bank Card</option>
+              </select>
+            </div>
+            <div class="floating-input-container grid-col-2 grid-row-1" *ngIf="selectedPaymentMethod">
+              <input type="number" class="form-control floating-input" id="myInputs" placeholder=" ">
+              <label for="myInputs" class="floating-label">Number (Mobile Money)</label>
+            </div>
+            <ng-container *ngIf="!selectedPaymentMethod">
+              <div class="floating-input-container grid-col-2 grid-row-1">
+                <input type="text" class="form-control floating-input" placeholder=" ">
+                <label for="myInputs" class="floating-label">Name on Card</label>
               </div>
-            </form>
+              <div class="floating-input-container grid-col-2 grid-row-2">
+                <input type="number" class="form-control floating-input" placeholder=" ">
+                <label for="myInputs" class="floating-label">Card Number</label>
+              </div>
+              <div class="d-flex grid-col-2 grid-row-3">
+                <div class="floating-input-container">
+                  <input type="text" class="form-control floating-input" placeholder=" " style="width: 100%">
+                  <label for="myInputs" class="floating-label">MM / YY</label>
+                </div>
+                <div class="floating-input-container">
+                  <input type="text" class="form-control floating-input" placeholder="" style="width: 100%">
+                  <label for="myInputs" class="floating-label">CVC</label>
+                </div>
+              </div>
+            </ng-container>
+            <div class="floating-input-container" [ngClass]="{'amount--card': !selectedPaymentMethod, 'amount': selectedPaymentMethod}">
+              <input type="text" class="form-control floating-input-amount sending_amount w-100" placeholder=" ">
+              <label for="myInputs" class="floating-label">Sending amount</label>
+            </div>
           </div>
-      </div>
+        </div>
+        <div class="sender">
+          <p>Sender</p>
+          <div class="grid">
+            <div class="floating-input-container grid-col-1-2">
+              <input type="text" class="form-control floating-input" id="myInputs" placeholder="">
+              <label for="myInputs" class="floating-label">Your email (Optional)</label>
+            </div>
+            <div class="grid-col-1-2">
+              <!--              <input type="text" class="form-control" placeholder="Country and Currency">-->
+              <select (change)="selectCountryAndCurrency($event)" class="form-select"
+                      aria-label="Default select example">
+                <option selected>Country and Currency</option>
+                <option value="1">{{ currencyInput }}</option>
+              </select>
+            </div>
+            <div class="grid-col-1-2">
+              <select (change)="selectPaymentMethod($event)" class="form-select"
+                      aria-label="Default select example">
+                <option selected>Receive via</option>
+                <option value="1">MTN Mobile Money</option>
+                <option value="2">Bank Account</option>
+              </select>
+            </div>
+            <div class="floating-input-container grid-col-2 grid-row-1" *ngIf="selectedPaymentMethod">
+              <input type="number" class="form-control floating-input" id="myInputs" placeholder=" ">
+              <label for="myInputs" class="floating-label">Number (Mobile Money)</label>
+            </div>
+            <ng-container *ngIf="!selectedPaymentMethod">
+              <div class="floating-input-container grid-col-2 grid-row-1">
+                <input type="text" class="form-control floating-input" placeholder=" ">
+                <label for="myInputs" class="floating-label">Bank Name</label>
+              </div>
+              <div class="floating-input-container grid-col-2 grid-row-2">
+                <input type="text" class="form-control floating-input" placeholder=" ">
+                <label for="myInputs" class="floating-label">Account Holder Name</label>
+              </div>
+              <div class="d-flex grid-col-2 grid-row-3">
+                <div class="floating-input-container">
+                  <input type="number" class="form-control floating-input" placeholder=" " style="width: 100%">
+                  <label for="myInputs" class="floating-label" style="font-size: 8px">Account Number (IBAN)</label>
+                </div>
+                <div class="floating-input-container">
+                  <input type="text" class="form-control floating-input" placeholder="" style="width: 100%">
+                  <label for="myInputs" class="floating-label">Sort Code</label>
+                </div>
+              </div>
+            </ng-container>
+            <div class="floating-input-container" [ngClass]="{'amount--card': !selectedPaymentMethod, 'amount': selectedPaymentMethod}">
+              <input type="text" class="form-control floating-input-amount sending_amount w-100" placeholder=" ">
+              <label for="myInputs" class="floating-label">Receiving <span style="text-align: right; padding-left: 90px; font-size: 8px">= USD8</span></label>
+            </div>
+          </div>
+          <div class="mt-3 d-flex discount">
+            <p class="discount_text">You are eligible for a free transaction and all that explanatory thing you gotta type here.</p>
+            <div class="d-flex apply">
+<!--              <i class="fas fa-caret-square-o-up" style="background-color: #5268FF; color: white; border: none"></i>-->
+              <span class="bi-check-square" style="background-color: #5268FF; color: white; border: none">
+              </span>
+              <p class="discount_apply">Apply Discount</p>
+            </div>
+          </div>
+        </div>
+      </form>
       <div class="butt_div">
         <button class="btn btn text-white send_button">Send</button>
         <p class="mt-3 terms_conditions"
