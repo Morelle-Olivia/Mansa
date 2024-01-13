@@ -111,7 +111,6 @@
           <div class="mt-3 d-flex discount">
             <p class="discount_text">You are eligible for a free transaction and all that explanatory thing you gotta type here.</p>
             <div class="d-flex apply">
-<!--              <i class="fas fa-caret-square-o-up" style="background-color: #5268FF; color: white; border: none"></i>-->
               <span class="bi-check-square" style="background-color: #5268FF; color: white; border: none">
               </span>
               <p class="discount_apply">Apply Discount</p>
@@ -120,7 +119,7 @@
         </div>
       </form>
       <div class="butt_div">
-        <button class="btn btn text-white send_button">Send</button>
+        <button class="btn btn text-white send_button" data-bs-toggle="modal" data-bs-target="#modal_aside_right" type="button">Send</button>
         <p class="mt-3 terms_conditions"
            style="font-size: 10px">Buy using our services you agree to our Terms and Conditions and Privacy Policy.</p>
       </div>
@@ -138,6 +137,32 @@
         <div *ngIf="!menuIsClicked" class="menu-button">
           <button class="bi-menu-up btn btn-dark" (click)="onClickMenu()"></button>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button to Verification / Confirmation Modal-->
+<div id="modal_aside_right" class="modal fixed-right fade" tabindex="-1" role="dialog" style="position: center">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="text-center">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.2496 5.30916C15.3368 4.46427 17.6167 4 20 4C29.9411 4 38 12.0589 38 22C38 23.1046 37.1046 24 36 24C34.8954 24 34 23.1046 34 22C34 14.268 27.732 8 20 8C18.1397 8 16.3689 8.36176 14.7504 9.01691C13.7266 9.43136 12.5606 8.93733 12.1461 7.91346C11.7317 6.8896 12.2257 5.72361 13.2496 5.30916ZM9.32347 9.91722C10.1516 10.6482 10.2304 11.912 9.49948 12.7402C7.32014 15.2093 6 18.4481 6 22C6 23.1046 5.10457 24 4 24C2.89543 24 2 23.1046 2 22C2 17.4364 3.70095 13.2651 6.50052 10.0932C7.23145 9.2651 8.49533 9.18629 9.32347 9.91722Z" fill="#5268FF"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 22C10 16.4772 14.4771 12 20 12C25.5229 12 30 16.4772 30 22C30 23.1046 29.1046 24 28 24C26.8954 24 26 23.1046 26 22C26 18.6863 23.3137 16 20 16C16.6863 16 14 18.6863 14 22C14 25.3543 13.3107 28.5528 12.0641 31.4575C11.6285 32.4726 10.4525 32.9423 9.43748 32.5067C8.42244 32.0711 7.95271 30.8951 8.38833 29.88C9.42495 27.4645 10 24.802 10 22ZM27.8423 26.0247C28.9332 26.1977 29.6773 27.2224 29.5043 28.3133C29.241 29.9734 28.8755 31.5997 28.4145 33.1855C28.1062 34.2462 26.9964 34.8561 25.9357 34.5477C24.875 34.2394 24.2652 33.1296 24.5735 32.0689C24.9881 30.6429 25.3168 29.1802 25.5537 27.6867C25.7267 26.5957 26.7514 25.8517 27.8423 26.0247Z" fill="#5268FF"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M20 20C21.1046 20 22 20.8954 22 22C22 26.4726 21.0813 30.7358 19.4203 34.6071C18.9848 35.6222 17.8088 36.092 16.7937 35.6565C15.7787 35.221 15.3088 34.045 15.7443 33.03C17.1954 29.6478 18 25.9204 18 22C18 20.8954 18.8954 20 20 20Z" fill="#5268FF"/>
+          </svg>
+        </div>
+
+        <p class="confirm">Confirm it’s you</p>
+        <div class="floating-input-verify">
+          <input type="text" class="form-control floating-input-verify-code" placeholder="" >
+          <label for="myInputs" class="floating-label-verify">Enter verification code</label>
+        </div>
+        <p class="text-center verify_message">Please enter the verificaton code we’ve sent to milesfenzou@gmail.com to confirm it’s really you.</p>
+        <button class="btn btn-primary verify_butt" data-bs-dismiss="modal">Verify</button>
+        <p class="resend_code">Resend code in 48 seconds</p>
       </div>
     </div>
   </div>
