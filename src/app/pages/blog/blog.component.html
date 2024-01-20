@@ -1,4 +1,4 @@
-<section>
+<section *ngIf="isTruncated">
   <div>
     <p class="blog">BLOG</p>
     <h3 class="header">Subheading here for your blog</h3>
@@ -83,6 +83,31 @@
         </span>
       </div>
     </div>
+    </div>
+  </div>
+</section>
+<section *ngIf="!isTruncated">
+  <div>
+    <p class="blog text-white">BLOG</p>
+    <i class="bi-arrow-left left_icon"></i>
+    <span class="ps-3 text-decoration-none" (click)="toggleText()">{{ !isTruncated ? 'BACK' : ''}}</span>
+    <div >
+      <p class="card_text truncated-text_above">
+        Which clubs and leagues have rejected Real Madrid and Barcelona’s Europenean Superleage?
+        Which clubs and leagues have rejected Real Madrid and Barcelona’s Europenean Superleage?
+      </p>
+      <div>
+        <img class="image" src="assets/images/banana.png" alt="">
+      </div>
+      <div class="container">
+        <p class="card_text_below truncated-text_below">
+          Which clubs and leagues have rejected Real Madrid and Barcelona’s Europenean Superleage?
+          Which clubs and leagues have rejected Real Madrid and Barcelona’s Europenean Superleage?
+        </p>
+      </div>
+      <span class="more_less_to_view" (click)="toggleText()">
+          {{ !isTruncated ? 'LESS' : ''}}
+        </span>
     </div>
   </div>
 </section>

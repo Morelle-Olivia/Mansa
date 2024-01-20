@@ -39,7 +39,6 @@
   text-align: left;
   opacity: 0.4;
   margin-bottom: 2%;
-
 }
 .truncated-text {
   max-width: 100%;
@@ -57,3 +56,54 @@
 .scrollable-section::-webkit-scrollbar {
   width: 8px;
 }
+
+.left_icon {
+  font-weight: 700;
+  font-size: 14px;
+}
+.truncated-text_above {
+  max-width: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+}
+.card_text_below {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 4%;
+}
+.truncated-text_below {
+  max-width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  direction: rtl;
+
+}
+/*.container {*/
+  /*width: 200px; !* Set the desired width for the container *!*/
+/*  overflow: hidden;*/
+/*}*/
+
+/*.card_text_below {*/
+/*  margin-left: 20px;*/
+/*  overflow: hidden;*/
+/*  max-width: 50ch;*/
+/*  text-overflow: ellipsis;*/
+/*  white-space: nowrap;*/
+/*  display: block;*/
+/*  font-style: italic;*/
+/*  background: var(--color-light-gray);*/
+/*  padding: 3px 20px;*/
+/*  border-radius: 8px;*/
+/*  direction: rtl;*/
+
+/*}*/
