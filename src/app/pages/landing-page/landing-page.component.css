@@ -67,6 +67,7 @@ input:placeholder-shown::placeholder {
 }
 
 .floating-label {
+  font-family: Roboto;
   position: absolute;
   font-size: 11px;
   padding: 10px 0px 10px 10px;

@@ -11,23 +11,22 @@
               <label for="myInputs" class="floating-label">Your email (Optional)</label>
             </div>
             <div class="grid-col-1-2">
-<!--              <input type="text" class="form-control" placeholder="Country and Currency">-->
               <select (change)="selectCountryAndCurrency($event)" class="form-select"
-                      aria-label="Default select example">
+                      aria-label="Default select example" style="font-family: Roboto;">
                 <option selected>Country and Currency</option>
                 <option value="1">{{ currencyInput }}</option>
               </select>
             </div>
             <div class="grid-col-1-2">
               <select (change)="selectPaymentMethod($event)" class="form-select"
-                      aria-label="Default select example">
+                      aria-label="Default select example" style="font-family: Roboto;">
                 <option selected>Payment Method</option>
                 <option value="1">MTN Mobile Money</option>
                 <option value="2">Bank Card</option>
               </select>
             </div>
             <div class="floating-input-container grid-col-2 grid-row-1" *ngIf="selectedPaymentMethod">
-              <input type="number" class="form-control floating-input" id="myInputs" placeholder=" ">
+              <input type="text" class="form-control floating-input" id="myInputs" placeholder=" ">
               <label for="myInputs" class="floating-label">Number (Mobile Money)</label>
             </div>
             <ng-container *ngIf="!selectedPaymentMethod">
@@ -36,7 +35,7 @@
                 <label for="myInputs" class="floating-label">Name on Card</label>
               </div>
               <div class="floating-input-container grid-col-2 grid-row-2">
-                <input type="number" class="form-control floating-input" placeholder=" ">
+                <input type="text" class="form-control floating-input" placeholder=" ">
                 <label for="myInputs" class="floating-label">Card Number</label>
               </div>
               <div class="d-flex grid-col-2 grid-row-3">
@@ -57,7 +56,7 @@
           </div>
         </div>
         <div class="sender">
-          <p>Sender</p>
+          <p>Receiver</p>
           <div class="grid">
             <div class="floating-input-container grid-col-1-2">
               <input type="text" class="form-control floating-input" id="myInputs" placeholder="">
@@ -80,7 +79,7 @@
               </select>
             </div>
             <div class="floating-input-container grid-col-2 grid-row-1" *ngIf="selectedPaymentMethod">
-              <input type="number" class="form-control floating-input" id="myInputs" placeholder=" ">
+              <input type="text" class="form-control floating-input" id="myInputs" placeholder=" ">
               <label for="myInputs" class="floating-label">Number (Mobile Money)</label>
             </div>
             <ng-container *ngIf="!selectedPaymentMethod">
@@ -94,7 +93,7 @@
               </div>
               <div class="d-flex grid-col-2 grid-row-3">
                 <div class="floating-input-container">
-                  <input type="number" class="form-control floating-input" placeholder=" " style="width: 100%">
+                  <input type="text" class="form-control floating-input" placeholder=" " style="width: 100%">
                   <label for="myInputs" class="floating-label" style="font-size: 8px">Account Number (IBAN)</label>
                 </div>
                 <div class="floating-input-container">
@@ -125,22 +124,25 @@
       </div>
     </div>
     <div class="col-1">
-      <div *ngIf="menuIsClicked" class="slider">
-        <button class="bi-chevron-compact-right btn btn-dark" (click)="onClickMenu()"></button>
-      </div>
+<!--      <div *ngIf="menuIsClicked" class="slider">-->
+<!--        <button class="bi-chevron-compact-right btn btn-dark" (click)="onClickMenu()"></button>-->
+<!--      </div>-->
     </div>
     <div class="col-4 dashboard">
-      <router-outlet *ngIf="menuIsClicked"></router-outlet>
+      <router-outlet ></router-outlet>
+<!--      *ngIf="menuIsClicked"-->
 
       <div class="d-flex">
 
-        <div *ngIf="!menuIsClicked" class="menu-button">
-          <button class="bi-menu-up btn btn-dark" (click)="onClickMenu()"></button>
-        </div>
+<!--        <div *ngIf="!menuIsClicked" class="menu-button">-->
+<!--          <button class="bi-menu-up btn btn-dark" (click)="onClickMenu()"></button>-->
+<!--        </div>-->
       </div>
     </div>
   </div>
 </div>
+
+<!--checkmark-->
 
 <!-- Button to Verification / Confirmation Modal-->
 <div id="modal_aside_right" class="modal fixed-right fade" tabindex="-1" role="dialog" style="position: center">

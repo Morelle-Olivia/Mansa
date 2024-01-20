@@ -7,6 +7,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { TransactionsComponent } from './pages/transactions/transactions.component';
 import { ViewAllTransactionsComponent } from './pages/view-all-transactions/view-all-transactions.component';
+import { BlogComponent } from './pages/blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { ViewAllTransactionsComponent } from './pages/view-all-transactions/view
     LandingPageComponent,
     TransactionsComponent,
     ViewAllTransactionsComponent,
+    BlogComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,59 @@
+* {
+  color: white;
+}
+.blog {
+  font-family: Inter;
+  font-size: 28px;
+  margin-top: -10%;
+  font-weight: 400;
+  line-height: 72px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #FFFFFF;
+}
+.header {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #F2F2F2;
+}
+.d-grid {
+  display: grid;
+  gap: 2px;
+  grid-template-columns: 36% 55%;
+  padding-bottom: 5%;
+}
+.image {
+  width: 90%;
+  height: 100%;
+}
+.card_text {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  opacity: 0.4;
+  margin-bottom: 2%;
+
+}
+.truncated-text {
+  max-width: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  text-overflow: ellipsis;
+}
+.scrollable-section {
+  padding-left: 3%;
+  height: 400px;
+  overflow: auto;
+}
+.scrollable-section::-webkit-scrollbar {
+  width: 8px;
+}
