@@ -79,13 +79,17 @@
   margin-top: 4%;
 }
 .truncated-text_below {
-  max-width: 100%;
+  /*max-width: 100%;*/
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  overflow: hidden;
   text-overflow: ellipsis;
   direction: rtl;
+
+  overflow: hidden;
+  max-width: 50ch;
+  white-space: nowrap;
+  display: block;
 
 }
 /*.container {*/
