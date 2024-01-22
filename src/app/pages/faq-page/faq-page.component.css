@@ -1,0 +1,65 @@
+.page_header {
+  font-family: Inter;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 72px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #FFFFFF;
+}
+.sub_header {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 26px;
+  margin-top: -4%;
+  text-align: left;
+  color: #FFFFFF;
+}
+.faq_card {
+  position: absolute;
+  width: 435px;
+  height: 317px;
+  padding: 30px 25px 30px 25px;
+  border-radius: 15px;
+  gap: 15px;
+  background-color: #E5E9FF;
+}
+.accord_style {
+  --bs-accordion-border-color: none;
+  --bs-accordion-border-radius: 10px;
+  --bs-accordion-inner-border-radius: 10px;
+  --bs-accordion-btn-bg: none;
+  --bs-accordion-btn-focus-box-shadow: none;
+  --bs-accordion-btn-icon-width: 0.70rem;
+  --bs-accordion-active-bg: none;
+  --bs-accordion-btn-icon-transform: rotate(-90deg);
+}
+.accordion-item:first-of-type {
+  border-radius: var(--bs-accordion-border-radius);
+}
+.faq_container {
+  position: relative;
+  margin-bottom: 5%;
+}
+.text_header {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #6A6D70;
+}
+.faq_content {
+  border-radius: 10px;
+  background-color: #FFFFFF;
+}
+.text_body {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}

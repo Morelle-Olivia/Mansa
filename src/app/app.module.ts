@@ -8,6 +8,7 @@ import { LandingPageComponent } from './pages/landing-page/landing-page.componen
 import { TransactionsComponent } from './pages/transactions/transactions.component';
 import { ViewAllTransactionsComponent } from './pages/view-all-transactions/view-all-transactions.component';
 import { BlogComponent } from './pages/blog/blog.component';
+import { FaqPageComponent } from './pages/faq-page/faq-page.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { BlogComponent } from './pages/blog/blog.component';
     TransactionsComponent,
     ViewAllTransactionsComponent,
     BlogComponent,
+    FaqPageComponent,
   ],
   imports: [
     BrowserModule,
